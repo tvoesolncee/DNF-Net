@@ -18,7 +18,7 @@ parser.add_argument('--model', default='model')
 parser.add_argument('--batch_size', type=int, default=40, help='Batch Size during training [default: 1]')
 parser.add_argument('--patch_size', type=int, default=800, help='Batch Size during training [default: 1]')
 parser.add_argument('--neighbor_size', type=int, default=50, help='Batch Size during training [default: 32]')
-parser.add_argument('--log_dir', default='log/log_synthetic')
+parser.add_argument('--log_dir', default='../trained_synthetic_model')
 FLAGS = parser.parse_args()
 
 BATCH_SIZE = FLAGS.batch_size

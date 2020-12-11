@@ -26,7 +26,7 @@ def patch_to_h5(test_data_folder, output_name, with_index=False):
             index = data[:, -1]
             index_data[item, :] = index
 
-    output_file = '../../data/test/input/' + output_name + '.h5' # output path of h5 file
+    output_file = '../data/test/input/' + output_name + '.h5' # output path of h5 file
     f = h5py.File(output_file, 'w')
     f['data'] = normal_data
     f['index'] = idx_data
@@ -35,6 +35,6 @@ def patch_to_h5(test_data_folder, output_name, with_index=False):
     f.close()
 
 if __name__=='__main__':
-    test_data_folder = '../../data/test/carter100K_n1/'  # this folder contains all the patch files
+    test_data_folder = '../data/test/carter100K_n1/'  # this folder contains all the patch files
     output_name = 'carter100K_n1'
     patch_to_h5(test_data_folder, output_name, with_index=False)
